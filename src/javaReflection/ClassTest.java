@@ -7,7 +7,7 @@ import java.util.Date;
 
 import javax.xml.crypto.Data;
 /**
- * reflection class Å×½ºÆ®
+ * reflection class í…ŒìŠ¤íŠ¸
  * @author soom
  *
  */
@@ -16,13 +16,13 @@ public class ClassTest {
 		try {
 			Class<?> c = Date.class;
 			// Class<?> c = Data.class;
-			// Class<?> c = Class.gorName("Å¬·¡½ºÀÌ¸§");
+			// Class<?> c = Class.gorName("í´ë˜ìŠ¤ì´ë¦„");
 			// Class<?> c = int.class;
-			// ±âº»ÇüÀÇ °æ¿ì (Integer ¿Í °°Àº) Wrapper ¿¡ ±âÁ¤ÀÇµÈ TYPEÀ» »ç¿ëÇÑ´Ù.
+			// ê¸°ë³¸í˜•ì˜ ê²½ìš° (Integer ì™€ ê°™ì€) Wrapper ì— ê¸°ì •ì˜ëœ TYPEì„ ì‚¬ìš©í•œë‹¤.
 			// Class<?> c = Integer.TYPE;
 			
 			Method[] m = c.getMethods();
-			// public À¸·Î ¼±¾ğµÈ º¯¼ö ¸ñ·ÏÀ» ¸®ÅÏ
+			// public ìœ¼ë¡œ ì„ ì–¸ëœ ë³€ìˆ˜ ëª©ë¡ì„ ë¦¬í„´
 			Field[] f = c.getFields();
 			Constructor<?>[] cs = c.getConstructors();
 			Class<?>[] inter = c.getInterfaces();
@@ -40,7 +40,7 @@ public class ClassTest {
 			
 			System.out.println("\n");
 			
-			// constructor : »ı¼ºÀÚ
+			// constructor : ìƒì„±ì
 			for (int i=0 ; i < cs.length ; i++) {
 				System.out.println("class Constructor[" + i + "] : " + cs[i].toString());
 			}

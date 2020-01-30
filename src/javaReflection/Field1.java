@@ -4,7 +4,7 @@ import java.lang.reflect.Field;
 import java.lang.reflect.Modifier;
 
 /**
- * Class Fields Ã£±â
+ * Class Fields ì°¾ê¸°
  * @author soom
  *
  */
@@ -24,9 +24,9 @@ public class Field1 {
 				System.out.println("name = " + fld.getName());
 				System.out.println("decl class = " + fld.getDeclaringClass());
 				System.out.println("type = " + fld.getType());
-				// modifier´Â "private int"¿Í °°Àº ÇÊµå ¸â¹ö¸¦ Ç¥ÇöÇÏ±â À§ÇÑ reflection class
-				// modifier Á¦¾îÀÚ : static, final, abstract
-				// access modifier Á¢±Ù Á¦¾îÀÚ : public, protected, default, private
+				// modifierëŠ” "private int"ì™€ ê°™ì€ í•„ë“œ ë©¤ë²„ë¥¼ í‘œí˜„í•˜ê¸° ìœ„í•œ reflection class
+				// modifier ì œì–´ì : static, final, abstract
+				// access modifier ì ‘ê·¼ ì œì–´ì : public, protected, default, private
 				int mod = fld.getModifiers();
 				System.out.println("modifiers num = " + mod);
 				System.out.println("modifiers = " + Modifier.toString(mod));

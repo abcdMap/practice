@@ -9,7 +9,7 @@ public class Instance1 {
 	
 	public static void main(String[] args) {
 		try {
-			// ±×³É "A"¶ó°í ÇÏ¸é java.lang.ClassNotFoundException ¹ß»ı ¤Ğ¤Ğ
+			// ê·¸ëƒ¥ "A"ë¼ê³  í•˜ë©´ java.lang.ClassNotFoundException ë°œìƒ ã… ã… 
 			Class<?> cls = Class.forName("dummy.A");
 			
 			boolean b1 = cls.isInstance(new Integer(37));
@@ -18,7 +18,7 @@ public class Instance1 {
 			boolean b2 = cls.isInstance(new A());
 			System.out.println(b2);
 		} catch (Throwable e) {
-			// Throwable > Exception, Error Å¬·¡½ºÀÇ »óÀ§ Å¬·¡½º
+			// Throwable > Exception, Error í´ë˜ìŠ¤ì˜ ìƒìœ„ í´ë˜ìŠ¤
 			System.err.println(e);
 			log.info(e.toString());
 		}

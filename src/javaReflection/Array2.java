@@ -3,7 +3,7 @@ package javaReflection;
 import java.lang.reflect.Array;
 
 /**
- * 3Â÷¿ø ¹è¿­ÀÇ »ç¿ë
+ * 3ì°¨ì› ë°°ì—´ì˜ ì‚¬ìš©
  * @author soom
  *
  */

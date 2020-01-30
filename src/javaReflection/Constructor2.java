@@ -3,7 +3,7 @@ package javaReflection;
 import java.lang.reflect.Constructor;
 
 /**
- * »õ·Î¿î °´Ã¼ ¸¸µé±â
+ * ìƒˆë¡œìš´ ê°ì²´ ë§Œë“¤ê¸°
  * @author soom
  *
  */
@@ -28,7 +28,7 @@ public class Constructor2 {
 			arglist[0] = new Integer(37);
 			arglist[1] = new Integer(47);
 			
-			// ÇØ´ç »ı¼ºÀÚ¸¦ Á¤ÀÇÇÏ´Â Å¬·¡½ºÀÇ °´Ã¼ ¸®ÅÏ
+			// í•´ë‹¹ ìƒì„±ìë¥¼ ì •ì˜í•˜ëŠ” í´ë˜ìŠ¤ì˜ ê°ì²´ ë¦¬í„´
 			Object retobj = ct.newInstance(arglist);
 			
 			boolean result = cls.isInstance(retobj);

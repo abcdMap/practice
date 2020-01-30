@@ -3,7 +3,7 @@ package javaReflection;
 import java.lang.reflect.Method;
 
 /**
- * ÀÌ¸§À¸·Î ¸Ş¼Òµå ½ÇÇà
+ * ì´ë¦„ìœ¼ë¡œ ë©”ì†Œë“œ ì‹¤í–‰
  * @author soom
  *
  */
@@ -16,13 +16,13 @@ public class Method2 {
 		try {
 			Class<?> cls = Class.forName("javaReflection.Method2");
 			
-			// µÎ°³ÀÇ ¼ıÀÚ ÆÄ¶ó¹ÌÅÍ
+			// ë‘ê°œì˜ ìˆ«ì íŒŒë¼ë¯¸í„°
 			Class<?> partypes[] = new Class[2];
 			partypes[0] = Integer.TYPE;
 			partypes[1] = Integer.TYPE;
 			
-			// add ¶ó´Â ¸Ş¼Òµå ÀÌ¸§À» ½ÇÇà ½Ã°£¿¡ ¾Ë°í ¹Ş¾Æ¿Ã ¶§
-			// cls¿¡¼­ µÎ°³ÀÇ ¼ıÀÚ ÆÄ¶ó¹ÌÅÍ¸¦ Áö´Ñ add ¶ó´Â ÀÌ¸§ÀÇ ¸Ş¼Òµå °Ë»ö
+			// add ë¼ëŠ” ë©”ì†Œë“œ ì´ë¦„ì„ ì‹¤í–‰ ì‹œê°„ì— ì•Œê³  ë°›ì•„ì˜¬ ë•Œ
+			// clsì—ì„œ ë‘ê°œì˜ ìˆ«ì íŒŒë¼ë¯¸í„°ë¥¼ ì§€ë‹Œ add ë¼ëŠ” ì´ë¦„ì˜ ë©”ì†Œë“œ ê²€ìƒ‰
 			String methodName = "add";
 			Method meth = cls.getMethod(methodName, partypes);
 			
@@ -31,7 +31,7 @@ public class Method2 {
 			arglist[0] = new Integer(37);
 			arglist[1] = new Integer(47);
 			
-			// ¸Ş¼Òµå ÇÔ¼ö È£Ãâ
+			// ë©”ì†Œë“œ í•¨ìˆ˜ í˜¸ì¶œ
 			Object retobj = meth.invoke(methobj, arglist);
 			Integer retval = (Integer) retobj;
 			System.out.println(retval.intValue());

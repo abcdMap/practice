@@ -3,7 +3,7 @@ package javaReflection;
 import java.lang.reflect.Field;
 
 /**
- * ÇÊµå°ª ¹Ù²Ù±â
+ * í•„ë“œê°’ ë°”ê¾¸ê¸°
  * @author soom
  *
  */
@@ -17,11 +17,11 @@ public class Field2 {
 			Field fld = cls.getField("d1");
 			Field2 f2obj = new Field2();
 			System.out.println("d = " + f2obj.d);
-			// f2obj °´Ã¼ÀÇ fld¿¡ Á¤ÀÇµÈ ÇÊµå¿¡¸¸ °ªÀ» ³ÖÀ½
+			// f2obj ê°ì²´ì˜ fldì— ì •ì˜ëœ í•„ë“œì—ë§Œ ê°’ì„ ë„£ìŒ
 			fld.setDouble(f2obj, 12.34);
 			System.out.println("d = " + f2obj.d);
 			System.out.println("d1 = " + f2obj.d1);
-			// f2obj °´Ã¼ÀÇ fld¿¡ Á¤ÀÇµÈ ÇÊµåÀÇ °ª¸¸ °¡Á®¿È
+			// f2obj ê°ì²´ì˜ fldì— ì •ì˜ëœ í•„ë“œì˜ ê°’ë§Œ ê°€ì ¸ì˜´
 			System.out.println("d = " + fld.getDouble(f2obj));
 		} catch (Throwable e) {
 			System.err.println(e);

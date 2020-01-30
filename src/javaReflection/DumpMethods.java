@@ -3,14 +3,14 @@ package javaReflection;
 import java.lang.reflect.Method;
 
 /**
- * Reflection : °´Ã¼¸¦ ÅëÇØ Å¬·¡½ºÀÇ Á¤º¸¸¦ ºÐ¼®ÇØ ³»´Â ÇÁ·Î±×·¥ ±â¹ý(Åõ¿µ, ¹Ý»ç)
+ * Reflection : ê°ì²´ë¥¼ í†µí•´ í´ëž˜ìŠ¤ì˜ ì •ë³´ë¥¼ ë¶„ì„í•´ ë‚´ëŠ” í”„ë¡œê·¸ëž¨ ê¸°ë²•(íˆ¬ì˜, ë°˜ì‚¬)
  * @author soom
  *
  */
 public class DumpMethods {
 	/**
-	 * ½ÇÇà Àü run Configuration > arguments 'java.util.Stack'
-	 * ÇÏÀ§ ¸Þ¼Òµå ¸®½ºÆ® Ãâ·Â
+	 * ì‹¤í–‰ ì „ run Configuration > arguments 'java.util.Stack'
+	 * í•˜ìœ„ ë©”ì†Œë“œ ë¦¬ìŠ¤íŠ¸ ì¶œë ¥
 	 * @param args
 	 */
 	public static void main(String args[]) {

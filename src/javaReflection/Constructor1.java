@@ -3,7 +3,7 @@ package javaReflection;
 import java.lang.reflect.Constructor;
 
 /**
- * Constructors ¿¡ ´ëÇÑ Á¤º¸ ¾ò±â
+ * Constructors ì— ëŒ€í•œ ì •ë³´ ì–»ê¸°
  * @author soom
  *
  */
