@@ -40,9 +40,9 @@ class LambdaTest {
 	}
 
 	@Test
-	@Disabled
+
 	public void funcTest() {
-		Func add = (int a, int b) -> a + b;
+		Func add = (a, b) -> a + b;
 		Func sub = (int a, int b) -> a - b;
 		Func add2 = (int a, int b) -> { return a + b; };
 		
@@ -55,6 +55,7 @@ class LambdaTest {
 	}
 	
 	@Test
+	@Disabled
 	public void streamTest() {
 		Stream s = Arrays.asList(1,2,3).stream();
 		Arrays.asList(1,2,3).parallelStream(); // 병렬 스트림
