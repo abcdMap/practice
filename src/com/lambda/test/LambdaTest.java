@@ -5,6 +5,8 @@ import static org.junit.Assert.assertEquals;
 import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
+import java.util.function.BiFunction;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -13,8 +15,10 @@ import org.junit.jupiter.api.Test;
 
 import com.lambda.Func;
 
-class LambdaTest {
+import dummy.Person;
 
+class LambdaTest {
+	// 익명 클래스
 	@Test
 	@Disabled
 	public void threadTest() {
@@ -40,7 +44,7 @@ class LambdaTest {
 	}
 
 	@Test
-
+	@Disabled
 	public void funcTest() {
 		Func add = (a, b) -> a + b;
 		Func sub = (int a, int b) -> a - b;
@@ -103,5 +107,43 @@ class LambdaTest {
 			System.out.println(it.next());
 		}
 		System.out.println("--end--");
+	}
+	
+	// JAVA8 Method Reference
+	@Test
+	public void methodReferenceTest() {
+		String [] strings = new String [] {
+				"6", "5", "4", "3", "2", "1"
+		};
+		
+		List<String> list = Arrays.asList(strings);
+		
+		/*
+		 * for (String s : strings) { System.out.println(s); }
+		 */
+		
+		//list.forEach(x -> System.out.println(x));
+		
+		// System 클래스가 가진 println 메소드를 forEach에게 전달
+		list.forEach(System.out::println);
+	}
+	
+	// 함수형 인터페이스 ex
+	// https://imcts.github.io/java-method-reference/
+	// JAVA 8 기본 함수형 인터페이스 : https://docs.oracle.com/javase/8/docs/api/java/util/function/package-summary.html
+	@Test
+	public void functionalInterfaceTest() {
+		Person member = new Person();
+		Person member1 = new Person("dolen1");
+		Person member2 = new Person("dolen2", "man");
+		
+		// Function<T,R> : T 타입 인자를 받는 함수
+		//Function<String, Person> myFunction = name -> new Person(name);
+		Function<String, Person> myFunction = Person::new;
+		myFunction.apply("dolen1");
+		
+		// BiFunction<T, U, R> : T와 U타입 인자를 받는 함수
+		BiFunction<String, String, Person> myFunction1 = Person::new;
+		myFunction1.apply("dolen", "man");
 	}
 }
